@@ -1,6 +1,5 @@
 import React from "react";
-import { BrowserRouter, Routes, Route } from "react-router-dom";
-import "./styles/style.css";
+import { HashRouter, Routes, Route } from "react-router-dom";import "./styles/style.css";
 import Navbar from "./components/navbar/Navbar";
 import Background from "./components/Background";
 import Footer from "./components/footer/Footer";
@@ -11,7 +10,7 @@ import ScientificWorks from "./pages/scientific-works/ScientificWorks";
 
 function App() {
   return (
-    <BrowserRouter>
+    <HashRouter>
       <div className="App">
         <Background />
         <Navbar />
@@ -27,7 +26,7 @@ function App() {
 
         <Footer />
       </div>
-    </BrowserRouter>
+    </HashRouter>
   );
 }
 
