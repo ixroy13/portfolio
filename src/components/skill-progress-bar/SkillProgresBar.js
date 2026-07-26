@@ -11,14 +11,14 @@ export default function SkillBar(props) {
     return (
         <div className="skill-box">
             <div className="skill-image">
-                <i className={`fab fa-${props.icon}`}></i>
+                <i className={`fa-solid fa-${props.icon}`} aria-hidden="true"></i>
             </div>
             <div className="skill-progress">
                 <div className="bar-box">
                     <span style={style} className="bar"></span>
                 </div>
                 <div className="label">
-                    <p>{t("firstSkillLabel")}</p>
+                    <p>{props.label}</p>
                     <p>{t("secondSkillLabel")}</p>
                 </div>
             </div>

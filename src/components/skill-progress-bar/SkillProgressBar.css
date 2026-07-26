@@ -48,39 +48,35 @@
 }
 
 .skill-box:nth-child(1) .skill-image {
-    background: #e34c26;
+    background: #217346;
     color: #fff;
 }
 
 .skill-box:nth-child(2) .skill-image {
-    background: #264de4;
+    background: #b7472a;
     color: #fff;
 }
 
 .skill-box:nth-child(3) .skill-image {
-    background: #f7df1e;
-    color: #000;
+    background: #2b579a;
+    color: #fff;
 }
 
 .skill-box:nth-child(4) .skill-image {
-    background: #242443;
-    color: #7cc5d9;
+    background: #0052cc;
+    color: #fff;
 }
 
 .skill-box:nth-child(5) .skill-image {
-    background: #f34f29;
+    background: #6b4fbb;
     color: #fff;
 }
 
 .skill-box:nth-child(6) .skill-image {
-    background: #444140;
+    background: #00897b;
     color: #fff;
 }
 
-.skill-box:nth-child(7) .skill-image {
-    background: #2b2b2b; 
-    color: #FFD43B;
-}
 
 @media (min-width: 1200px) {
     .skill-box:hover {

@@ -1,7 +1,7 @@
 .projects {
     padding: 0;
     width: 100%;
-    color: #fff;
+    color: var(--white);
     margin-top: clamp(5rem, 8vw, 13rem);
 
 }
@@ -12,7 +12,14 @@
     display: grid;
     place-items: center;
     isolation: isolate;
-    font-size: clamp(2rem, 3vw, 3rem);
+    font-size: clamp(2rem, 3.5vw, 3rem);
+    color: #fff;
+}
+
+.project-baner h1 {
+    font-size: inherit;
+    line-height: 1.15;
+    text-align: center;
 }
 
 .project-baner::after {
@@ -35,7 +42,8 @@
     row-gap: 4vw;
 }
 
-.project-tiles a {
+.project-tiles a,
+.project-card {
     padding: .8rem;
 }
 
@@ -63,7 +71,8 @@
         gap: 4vw;
     }
 
-    .project-tiles a {
+    .project-tiles a,
+    .project-card {
         width: calc(50% - 2vw);
         border: 1px solid transparent;
         transition: .3s;
@@ -75,7 +84,8 @@
         display: flex;
     }
 
-    .project-tiles a:hover {
+    .project-tiles a:hover,
+    .project-card:hover {
         border: 1px solid var(--white);
     }
 }

@@ -15,6 +15,24 @@ nav {
     z-index: 6000;
 }
 
+.main-nav.info-open {
+  z-index: 8000;
+}
+
+.main-nav.info-open .logo-btn,
+.main-nav.info-open .menu-list,
+.main-nav.info-open .menu-toggle {
+  visibility: hidden;
+  pointer-events: none;
+}
+
+.main-nav.info-open .info-btn {
+  position: relative;
+  z-index: 1;
+  background: var(--black);
+  border: 1px solid var(--white);
+}
+
 
 
 .logo-btn h1 {
@@ -208,6 +226,13 @@ button[aria-expanded="true"] .line {
     z-index: 1;
     background: #171717;
     color: #fff;
+  }
+
+  .main-nav.info-open .info-btn {
+    position: fixed;
+    top: auto;
+    right: 4%;
+    bottom: 4%;
   }
 }
 

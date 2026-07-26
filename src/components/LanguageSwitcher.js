@@ -1,32 +1,19 @@
-import React, { useState } from "react";
+import React from "react";
 import { useTranslation } from "react-i18next";
 
-const LanguageSwitcher = () => {
+export default function LanguageSwitcher() {
   const { i18n } = useTranslation();
-  const [isOpen, setIsOpen] = useState(false);
-
-  const toggleDropdown = () => setIsOpen(!isOpen);
-
-  const selectLanguage = (code) => {
-    i18n.changeLanguage(code);
-    setIsOpen(false);
-  };
+  const currentLanguage = i18n.resolvedLanguage || i18n.language;
+  const nextLanguage = currentLanguage === "pl" ? "en" : "pl";
 
   return (
-    <div className="simple-lang-switcher">
-      <button className="lang-btn" onClick={toggleDropdown}>
-        {i18n.language.toUpperCase()}
-        <i className={`fas fa-chevron-down ${isOpen ? "open" : ""}`}></i>
-      </button>
-
-      {isOpen && (
-        <ul className="lang-dropdown">
-          <li onClick={() => selectLanguage("eng")}>ENG</li>
-          <li onClick={() => selectLanguage("pl")}>PL</li>
-        </ul>
-      )}
-    </div>
+    <button
+      className="lang-btn"
+      type="button"
+      onClick={() => i18n.changeLanguage(nextLanguage)}
+      aria-label={`Switch language to ${nextLanguage === "en" ? "English" : "Polish"}`}
+    >
+      {nextLanguage.toUpperCase()}
+    </button>
   );
-};
-
-export default LanguageSwitcher;
+}

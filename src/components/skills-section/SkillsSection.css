@@ -9,7 +9,7 @@
     display: grid;
     place-items: center;
     isolation: isolate;
-    font-size: clamp(2rem, 3vw, 3rem);
+    font-size: clamp(2rem, 3.5vw, 3rem);
 }
 
 .title::after {
@@ -28,6 +28,9 @@
 
 .title h1 {
     color: #fff;
+    font-size: inherit;
+    line-height: 1.15;
+    text-align: center;
 }
 
 .skills-level {
@@ -39,6 +42,8 @@
 .bar-info {
     margin: clamp(1rem, 5vw, 1.5rem) 4%;
     color: var(--white);
+    font-size: 0.95rem;
+    text-align: center;
 }
 
 .bar-info button {
@@ -67,12 +72,14 @@
 
 @media (min-width: 1000px) {
     .skills-level {
-        display: flex;
-        justify-content: space-between;
-        flex-wrap: wrap;
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        grid-template-rows: repeat(3, auto);
+        grid-auto-flow: column;
+        column-gap: 4%;
     }
 
     .skill-box {
-        width: 48%;
+        width: 100%;
     }
 }

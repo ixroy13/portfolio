@@ -4,7 +4,7 @@ import img from "../images/background.svg"
 function Background() {
   return (
     <div className="background">
-      <img src={img}/>
+      <img src={img} alt="" />
     </div>
   );
 }

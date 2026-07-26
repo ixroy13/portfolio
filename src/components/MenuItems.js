@@ -13,12 +13,6 @@ export default function MenuList() {
       <li>
         <Link to="/cv">CV</Link>
       </li>
-      <li>
-        <Link to="/prace-naukowe">{t('scientificWorks')}</Link>
-      </li>
-      <li>
-        <Link to="/archiwum-2023">{t('archive2023')}</Link>
-      </li>
     </ul>
   );
 }

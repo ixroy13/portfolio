@@ -1,6 +1,5 @@
 import React from "react";
 import "./footer.css";
-import MenuList from "../MenuItems";
 
 export default function Footer() {
   return (
@@ -10,20 +9,12 @@ export default function Footer() {
       </div>
       <div className="socials">
         <div className="in">
-          <a
-            href="https://www.linkedin.com/in/aleksanderpal"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
+          <a href="https://www.linkedin.com/in/aleksanderpal" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
             <i className="fab fa-linkedin"></i>
           </a>
         </div>
         <div className="gh">
-          <a
-            href="https://github.com/ixroy13"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
+          <a href="https://github.com/ixroy13" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
             <i className="fab fa-github"></i>
           </a>
         </div>
