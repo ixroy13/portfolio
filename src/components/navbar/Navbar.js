@@ -36,7 +36,7 @@ export default function Navbar() {
 
   return (
     <>
-      <nav className="main-nav">
+      <nav className={`main-nav ${isInfoOpen ? "info-open" : ""}`}>
         <div className="logo-btn">
           <Link to="/">
             <h1>Ixroy</h1>
@@ -52,23 +52,23 @@ export default function Navbar() {
 
         <div className="nav-btns">
           <LanguageSwitcher />
-
           <button
             className="btn-deafult theme-switch primary-btn"
             onClick={darkModeSwitch}
             title={theme === "dark" ? t("lightMode") : t("darkMode")}
           >
             {themeModeIcon}
-            <span className="sr-only">Dark/Light mode switch</span>
+            <span className="sr-only">{t("themeSwitch")}</span>
           </button>
 
           <button
             onClick={openInfoBox}
             title={t("personalInfo")}
             className="btn-deafult primary-btn info-btn"
+            aria-expanded={isInfoOpen}
           >
             <i className="far fa-user"></i>
-            <span className="sr-only">My personal information</span>
+            <span className="sr-only">{t("personalInfo")}</span>
           </button>
 
           <button
@@ -107,7 +107,7 @@ export default function Navbar() {
                 rx="5"
               ></rect>
             </svg>
-            <span className="sr-only">Menu toggle</span>
+            <span className="sr-only">{t("menuToggle")}</span>
           </button>
         </div>
       </nav>
