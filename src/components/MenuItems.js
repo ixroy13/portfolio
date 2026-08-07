@@ -1,17 +1,20 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 import { useTranslation } from "react-i18next";
 
 
-export default function MenuList() {
+export default function MenuList({ onNavigate }) {
   const { t } = useTranslation();
   return (
     <ul>
       <li>
-        <Link to="/">{t('homePage')}</Link>
+        <NavLink to="/" end onClick={onNavigate}>{t('homePage')}</NavLink>
       </li>
       <li>
-        <Link to="/cv">CV</Link>
+        <NavLink to="/kariera" onClick={onNavigate}>{t('career')}</NavLink>
+      </li>
+      <li>
+        <NavLink to="/cv" onClick={onNavigate}>CV</NavLink>
       </li>
     </ul>
   );

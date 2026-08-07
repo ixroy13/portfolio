@@ -1,11 +1,17 @@
 import React from "react";
+import { useLocation } from "react-router-dom";
+import { useTranslation } from "react-i18next";
 import "./footer.css";
 
 export default function Footer() {
+  const { pathname } = useLocation();
+  const { t } = useTranslation();
+  const footerMessage = pathname === "/" ? t("footerHome") : t("footerCodex");
+
   return (
     <footer>
       <div className="nav-links">
-        <p>Made with ❤️ not 🤖</p>
+        <p>{footerMessage}</p>
       </div>
       <div className="socials">
         <div className="in">

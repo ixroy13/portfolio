@@ -7,6 +7,8 @@
     --black: #000;
     --white: #fff;
     --transition3: .3s;
+    --nav-vertical-padding: clamp(.75rem, 2vw, 2rem);
+    --nav-height: calc(3.2rem + var(--nav-vertical-padding) + var(--nav-vertical-padding));
 }
 
 * {
@@ -30,6 +32,7 @@ body {
     padding-top: var(--nav-height);
 } */
 
+html.fixed-position,
 body.fixed-position {
     overflow: hidden;
 }
@@ -49,6 +52,7 @@ body.light-mode {
     flex-grow: 1;
     display: flex;
     flex-direction: column;
+    padding-top: var(--nav-height);
 }
 
 .btn-deafult {

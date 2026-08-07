@@ -1,5 +1,5 @@
-import React, { useState } from "react";
-import { Link } from "react-router-dom";
+import React, { useEffect, useState } from "react";
+import { Link, useLocation } from "react-router-dom";
 import "./nav.css";
 import MenuList from "../MenuItems";
 import LanguageSwitcher from "../LanguageSwitcher";
@@ -8,13 +8,19 @@ import Contact from "../contact/Contact";
 
 export default function Navbar() {
   const { t } = useTranslation();
+  const location = useLocation();
   const [theme, setTheme] = useState("dark");
   const [isOpened, setIsOpened] = useState(false);
   const [isInfoOpen, setIsInfoOpen] = useState(false);
 
   function changeMenuState() {
+    setIsInfoOpen(false);
     setIsOpened((prevValue) => !prevValue);
-    document.body.classList.toggle("fixed-position");
+  }
+
+  function closeMenu() {
+    setIsOpened(false);
+    setIsInfoOpen(false);
   }
 
   const darkModeSwitch = () => {
@@ -24,8 +30,23 @@ export default function Navbar() {
 
   const openInfoBox = () => {
     setIsInfoOpen((prev) => !prev);
-    document.body.classList.toggle("fixed-position");
   };
+
+  useEffect(() => {
+    const shouldLockScroll = isOpened || isInfoOpen;
+    document.body.classList.toggle("fixed-position", shouldLockScroll);
+    document.documentElement.classList.toggle("fixed-position", shouldLockScroll);
+
+    return () => {
+      document.body.classList.remove("fixed-position");
+      document.documentElement.classList.remove("fixed-position");
+    };
+  }, [isOpened, isInfoOpen]);
+
+  useEffect(() => {
+    setIsOpened(false);
+    setIsInfoOpen(false);
+  }, [location.pathname]);
 
   let themeModeIcon =
     theme === "light" ? (
@@ -38,7 +59,7 @@ export default function Navbar() {
     <>
       <nav className={`main-nav ${isInfoOpen ? "info-open" : ""}`}>
         <div className="logo-btn">
-          <Link to="/">
+          <Link to="/" onClick={closeMenu}>
             <h1>Ixroy</h1>
           </Link>
         </div>
@@ -47,7 +68,7 @@ export default function Navbar() {
           className="menu-list"
           data-visible={isOpened ? "visible" : "hidden"}
         >
-          <MenuList />
+          <MenuList onNavigate={closeMenu} />
         </div>
 
         <div className="nav-btns">

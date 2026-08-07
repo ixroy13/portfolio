@@ -34,11 +34,55 @@ const resources = {
         "Ukończyłem kurs Agile Project Management od Google, rozwijając wiedzę o prowadzeniu projektów w metodykach zwinnych.",
       contact: "Kontakt",
       describeYs:
-        "Rozwijam się w obszarze zarządzania projektami. Łączę studia z pracą w kole naukowym, a w projektach najlepiej czuję się przy organizacji pracy zespołu, planowaniu sprintów i dbaniu o sprawną komunikację.",
+        "Hej, mam na imię Olek. Studiuję Inżynierię Zarządzania na Politechnice Wrocławskiej. To mój drugi kierunek na tej uczelni, bo po roku zrezygnowałem z Elektromobilności. Z perspektywy czasu ta zmiana była jedną z lepszych decyzji, jakie podjąłem.\n\nŻeby rozwijać się w tym, co lubię, dołączyłem do Koła Naukowego Falcon, gdzie razem z 30-osobową ekipą projektujemy, budujemy i programujemy drony od zera. Działam w sekcji organizacyjnej, a na co dzień najbliżej współpracuję z pięcioma mega utalentowanymi znajomymi przy projekcie SFERA, więcej o nim piszę w zakładce Kariera.\n\nW najbliższym czasie chcę zdobywać doświadczenie u ludzi, którzy wiedzą więcej ode mnie. To najszybsza droga do tego, żeby kiedyś samodzielnie prowadzić projekty.\n\nNie mam jeszcze do końca sprecyzowanego celu. Duża spółka czy startup, obie ścieżki mnie ciekawią. Ale jeśli miałbym wskazać wzór, to Gwynne Shotwell, COO SpaceX. Działa w cieniu Muska, choć to właśnie ona realnie ogarnia organizację i zarządzanie firmą. Gdybym miał opisać swój cel zawodowy jednym zdaniem, to właśnie taka rola.",
       lightMode: "Tryb jasny",
       darkMode: "Tryb ciemny",
       personalInfo: "O mnie",
       homePage: "Strona główna",
+      career: "Kariera",
+      careerCategoryEducation: "Edukacja",
+      careerCategoryWork: "Praca",
+      careerCategorySelfDevelopment: "Samorozwój",
+      careerCategoryCareerGoal: "Cel kariery",
+      careerGoalTitle: "Dokąd zmierzam?",
+      careerGoalPeriod: "",
+      careerGoalDescription:
+        "Chcę robić coś, co lubię, i być w tym dobry. Najbliższy krok to zdobycie realnego doświadczenia. Jestem otwarty na różne branże, ale najmocniej ciągnie mnie IT. Praca z ludźmi mądrzejszymi ode mnie to najszybsza droga do nauki. Docelowo widzę siebie w startupach, w chaosie, który tam panuje i w satysfakcji z budowania czegoś od zera.",
+      careerTitle: "Ścieżka kariery",
+      careerIntro:
+        "Rozwijam się w obszarze zarządzania projektami, łącząc studia, pracę zespołową i praktyczne podejście do realizacji projektów.",
+      careerEducationTitle: "Inżynieria Zarządzania",
+      careerEducationPeriod: "październik 2024 - obecnie",
+      careerEducationDescription:
+        "Na Inżynierii Zarządzania najbardziej lubię łączenie zarządzania projektami z narzędziami AI, to kierunek, w którym realnie chcę się rozwijać. Fajnym bonusem jest to, że na roku poznałem ludzi z podobnymi ambicjami, z którymi można nie tylko razem się uczyć, ale i po prostu dobrze spędzać czas.",
+      careerFalconTitle: "Koło Naukowe Falcon",
+      careerFalconPeriod: "marzec 2026 - obecnie",
+      careerFalconDescription:
+        "Jestem członkiem Koła Naukowego Falcon, które projektuje i buduje drony. Koordynuję 5-osobowy zespół pracujący nad projektem SFERA, dronem-projektorem zdolnym wyświetlać dowolny obraz w powietrzu.",
+      careerAgileTitle: "Agile Project Management",
+      careerAgilePeriod: "lipiec 2026",
+      careerAgileDescription:
+        "Ukończyłem kurs Google Agile Project Management. Najwięcej dało mi zrozumienie, jak dzielić pracę na sprinty i jak rozkładać role w zespole, żeby komunikacja nie powodowała zbędnych problemów.",
+      careerVolunteeringTitle: "Akademia Przyszłości",
+      careerVolunteeringPeriod: "wrzesień 2024 - czerwiec 2025",
+      careerVolunteeringDescription:
+        "Przez rok szkolny w ramach wolontariatu prowadziłem cotygodniowe spotkania z moim podopiecznym, pracowaliśmy razem nad jego pewnością siebie, a przy okazji zbudowaliśmy naprawdę dobrą relację. Każde spotkanie dokumentowałem w systemie fundacji Wiosna.",
+      careerRossmannTitle: "Rossmann (poprzez agencję ISSP)",
+      careerRossmannPeriod: "czerwiec 2024 - grudzień 2025",
+      careerRossmannDescription:
+        "To była moja pierwsza praca w pełnym wymiarze godzin. Nauczyłem się pracy w zespole i ogarniania wielu zmiennych naraz, m.in. biorąc udział w logistyce otwarcia nowych drogerii. Mimo krótkiego stażu współpracownicy cenili moje zaangażowanie i gotować do podejmowania się trudniejszych obowiązków.",
+      careerBiedronkaTitle: "Biedronka",
+      careerBiedronkaPeriod: "lipiec 2023 - wrzesień 2023",
+      careerBiedronkaDescription:
+        "Praca w Biedronce przy przyjmowaniu dostaw była moim kolejnym doświadczeniem zawodowym. To była praca wakacyjna, trwała 3 miesiące, ale dała mi pierwsze pojęcie o tym, jak wygląda praca w zespole i odpowiedzialność za konkretne zadania.",
+      careerGreenMaintenanceTitle: "Utrzymanie terenów zielonych",
+      careerGreenMaintenancePeriod: "maj 2020 - wrzesień 2022",
+      careerGreenMaintenanceDescription:
+        "Razem z braćmi wpadliśmy na pomysł, zeby zarabiać na trzymaniu terenów zielonych. Przy pomocy Taty zdobyliśmy pierwszych kleintów i przez 3 sezony zajmowaliśmy sie koszeniem trawników oraz przycinaniem drzewek i krzewów.",
+      careerResortTitle: "Leśny Kurort",
+      careerResortPeriod: "sierpień 2019 - styczeń 2020",
+      careerResortDescription:
+        "Moja pierwsza praca zarobkowa. Pracowałem jako kelner i pomoc barmana. Poznałem czym jest praca z ludźmi i jak ważna jest komunikacja. Zaczęło się jako sposób na dorobienie w wakacje a końcowo spędziłem tam 6 miesięcy.",
       scrollToSkills: "Przewiń do kompetencji",
       themeSwitch: "Przełącz tryb jasny/ciemny",
       menuToggle: "Otwórz lub zamknij menu",
@@ -53,6 +97,8 @@ const resources = {
       cvGoogleDescription:
         "Ukończony kurs z zakresu zwinnego zarządzania projektami",
       cvCompleted: "Ukończony",
+      footerHome: "Made with ❤️ not 🤖",
+      footerCodex: "Designed with ❤️ built with Codex",
       footer: "Stworzone z pasją, nie przez robota",
     },
   },
@@ -88,11 +134,55 @@ const resources = {
         "I completed Google's Agile Project Management course, expanding my knowledge of running projects with agile methodologies.",
       contact: "Contact",
       describeYs:
-        "I am developing my skills in project management. I combine my studies with work in a scientific circle, and I feel most confident organising team work, planning sprints and ensuring clear communication.",
+        "Hi, my name is Olek. I study Management Engineering at Wrocław University of Science and Technology. This is my second degree at the university, because after a year I left Electromobility. Looking back, that change was one of the better decisions I have made.\n\nTo develop in the areas I enjoy, I joined the Falcon Scientific Circle, where, together with a 30-person team, we design, build and program drones from scratch. I work in the organisation section, and day to day I collaborate most closely with five incredibly talented friends on the SFERA project. I write more about it in the Career tab.\n\nIn the near future, I want to gain experience from people who know more than I do. It is the fastest way to eventually lead projects independently.\n\nI do not have a fully defined goal yet. Both a large company and a startup interest me. But if I had to name a role model, it would be Gwynne Shotwell, COO of SpaceX. She works in Musk's shadow, even though she is the one who actually handles the organisation and management of the company. If I had to describe my professional goal in one sentence, it would be that kind of role.",
       lightMode: "Light mode",
       darkMode: "Dark mode",
       personalInfo: "About me",
       homePage: "Home",
+      career: "Career",
+      careerCategoryEducation: "Education",
+      careerCategoryWork: "Work",
+      careerCategorySelfDevelopment: "Self-development",
+      careerCategoryCareerGoal: "Career goal",
+      careerGoalTitle: "Where am I heading?",
+      careerGoalPeriod: "",
+      careerGoalDescription:
+        "I want to do something I enjoy and become good at it. My next step is to gain real-world experience. I am open to different industries, but I am most drawn to IT. Working with people who are smarter than me is the fastest way to learn. In the long term, I see myself in startups, in the chaos they create and in the satisfaction of building something from scratch.",
+      careerTitle: "Career path",
+      careerIntro:
+        "I am developing in project management by combining my studies, teamwork and a practical approach to project delivery.",
+      careerEducationTitle: "Management Engineering",
+      careerEducationPeriod: "October 2024 - present",
+      careerEducationDescription:
+        "What I like most about Management Engineering is combining project management with AI tools; this is the direction in which I genuinely want to develop. A nice bonus is that I met people in my year with similar ambitions, with whom I can not only study but also simply spend good time.",
+      careerFalconTitle: "Falcon Scientific Circle",
+      careerFalconPeriod: "March 2026 - present",
+      careerFalconDescription:
+        "I am a member of the Falcon Scientific Circle, which designs and builds drones. I coordinate a five-person team working on the SFERA project, a projector drone capable of displaying any image in the air.",
+      careerAgileTitle: "Agile Project Management",
+      careerAgilePeriod: "July 2026",
+      careerAgileDescription:
+        "I completed Google's Agile Project Management course. What helped me most was understanding how to divide work into sprints and how to distribute roles in a team so that communication did not create unnecessary problems.",
+      careerVolunteeringTitle: "Akademia Przyszłości",
+      careerVolunteeringPeriod: "September 2024 - June 2025",
+      careerVolunteeringDescription:
+        "Throughout the school year, as a volunteer, I held weekly meetings with my mentee. We worked together on their confidence and, along the way, built a really good relationship. I documented every meeting in the Wiosna Foundation's system.",
+      careerRossmannTitle: "Rossmann (through ISSP agency)",
+      careerRossmannPeriod: "June 2024 - December 2025",
+      careerRossmannDescription:
+        "This was my first full-time job. I learned how to work in a team and manage many variables at once, including helping with the logistics of opening new drugstores. Despite the short tenure, my colleagues valued my commitment and willingness to take on more challenging responsibilities.",
+      careerBiedronkaTitle: "Biedronka",
+      careerBiedronkaPeriod: "July 2023 - September 2023",
+      careerBiedronkaDescription:
+        "Working at Biedronka receiving deliveries was my next professional experience. It was a summer job that lasted three months, but it gave me my first insight into teamwork and responsibility for specific tasks.",
+      careerGreenMaintenanceTitle: "Green area maintenance",
+      careerGreenMaintenancePeriod: "May 2020 - September 2022",
+      careerGreenMaintenanceDescription:
+        "My brothers and I came up with the idea of earning money by maintaining green areas. With our father's help, we found our first clients and spent three seasons mowing lawns and trimming trees and shrubs.",
+      careerResortTitle: "Leśny Kurort",
+      careerResortPeriod: "August 2019 - January 2020",
+      careerResortDescription:
+        "My first paid job. I worked as a waiter and a bartender's assistant. I learned what working with people was like and how important communication is. It started as a way to earn extra money during the holidays, but I ended up spending six months there.",
       scrollToSkills: "Scroll to skills",
       themeSwitch: "Switch light/dark mode",
       menuToggle: "Open or close menu",
@@ -106,6 +196,8 @@ const resources = {
       cvPresent: "Present",
       cvGoogleDescription: "Completed course in agile project management",
       cvCompleted: "Completed",
+      footerHome: "Made with ❤️ not 🤖",
+      footerCodex: "Designed with ❤️ built with Codex",
       footer: "Created with passion, not by a robot",
     },
   },

@@ -1,13 +1,46 @@
-import React from "react";
+import React, { useEffect, useRef, useState } from "react";
 import "./SkillsSection.css";
 import SkillBar from "../skill-progress-bar/SkillProgresBar";
 import { useTranslation } from "react-i18next";
 
 export default function SkillsSection() {
   const { t } = useTranslation();
+  const sectionRef = useRef(null);
+  const [isVisible, setIsVisible] = useState(false);
+
+  useEffect(() => {
+    const section = sectionRef.current;
+    if (!section) return undefined;
+
+    const prefersReducedMotion = window.matchMedia?.(
+      "(prefers-reduced-motion: reduce)"
+    ).matches;
+
+    if (prefersReducedMotion || !("IntersectionObserver" in window)) {
+      setIsVisible(true);
+      return undefined;
+    }
+
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          setIsVisible(true);
+          observer.unobserve(entry.target);
+        }
+      },
+      { threshold: 0.2, rootMargin: "0px 0px -15% 0px" }
+    );
+
+    observer.observe(section);
+    return () => observer.disconnect();
+  }, []);
 
   return (
-    <section className="skills" id="skills-section">
+    <section
+      ref={sectionRef}
+      className={`skills ${isVisible ? "is-visible" : ""}`}
+      id="skills-section"
+    >
       <div className="title">
         <h1>{t("skills")}</h1>
       </div>

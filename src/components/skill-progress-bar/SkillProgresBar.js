@@ -4,9 +4,7 @@ import { useTranslation } from "react-i18next";
 
 export default function SkillBar(props) {
     const { t } = useTranslation();
-    const style = {
-        background: `linear-gradient(to right, #40ff00 ${props.skill}%, #282828 0%)`
-    }
+    const style = { "--skill-level": `${props.skill}%` };
 
     return (
         <div className="skill-box">

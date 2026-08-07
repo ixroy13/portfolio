@@ -10,7 +10,9 @@ export default function Contact({ isOpen }) {
       <div className="drawer-content">
         <div className="describe-ys">
           <h1>👋</h1>
-          <p>{t("describeYs")}</p>
+          {t("describeYs").split("\n\n").map((paragraph, index) => (
+            <p key={index}>{paragraph}</p>
+          ))}
         </div>
         <ContactInfo />
       </div>

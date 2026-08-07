@@ -1,0 +1,27 @@
+.career-container {
+    width: min(92%, 70rem);
+    margin: 0 auto;
+    padding: clamp(3em, 3vw, 7rem) 0;
+    color: var(--white);
+}
+
+.career-eyebrow {
+    margin-bottom: .75rem;
+    color: var(--light-blue);
+    font-size: .95rem;
+    font-weight: 700;
+    letter-spacing: .12em;
+    text-transform: uppercase;
+}
+
+.career-header h1 {
+    margin-bottom: 1.25rem;
+    font-size: clamp(2.5rem, 7vw, 5.5rem);
+    line-height: 1;
+}
+
+.career-header > p:last-child {
+    max-width: 42rem;
+    font-size: clamp(1rem, 2vw, 1.25rem);
+    line-height: 1.7;
+}

@@ -37,7 +37,34 @@
     width: 100%;
     height: 3px;
     border-radius: 5px;
+    overflow: hidden;
+    background: #282828;
     transition: .3s;
+}
+
+.bar::after {
+    content: "";
+    position: absolute;
+    inset: 0 auto 0 0;
+    width: var(--skill-level);
+    border-radius: inherit;
+    background: #40ff00;
+    transform: scaleX(0);
+    transform-origin: left;
+}
+
+.skills.is-visible .bar::after {
+    animation: skill-bar-fill .8s cubic-bezier(.22, 1, .36, 1) var(--skill-delay) both;
+}
+
+@keyframes skill-bar-fill {
+    from {
+        transform: scaleX(0);
+    }
+
+    to {
+        transform: scaleX(1);
+    }
 }
 
 .label {
@@ -75,6 +102,13 @@
 .skill-box:nth-child(6) .skill-image {
     background: #00897b;
     color: #fff;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .bar::after {
+        transform: scaleX(1);
+        animation: none;
+    }
 }
 
 
