@@ -8,13 +8,19 @@ export default function MenuList({ onNavigate }) {
   return (
     <ul>
       <li>
-        <NavLink to="/" end onClick={onNavigate}>{t('homePage')}</NavLink>
+        <NavLink to="/" end onClick={onNavigate}>
+          <span>{t('homePage')}</span>
+        </NavLink>
       </li>
       <li>
-        <NavLink to="/kariera" onClick={onNavigate}>{t('career')}</NavLink>
+        <NavLink to="/kariera" onClick={onNavigate}>
+          <span>{t('career')}</span>
+        </NavLink>
       </li>
       <li>
-        <NavLink to="/cv" onClick={onNavigate}>CV</NavLink>
+        <NavLink to="/cv" onClick={onNavigate}>
+          <span>CV</span>
+        </NavLink>
       </li>
     </ul>
   );

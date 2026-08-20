@@ -12,11 +12,7 @@ export default function SkillsSection() {
     const section = sectionRef.current;
     if (!section) return undefined;
 
-    const prefersReducedMotion = window.matchMedia?.(
-      "(prefers-reduced-motion: reduce)"
-    ).matches;
-
-    if (prefersReducedMotion || !("IntersectionObserver" in window)) {
+    if (!("IntersectionObserver" in window)) {
       setIsVisible(true);
       return undefined;
     }
@@ -45,12 +41,14 @@ export default function SkillsSection() {
         <h1>{t("skills")}</h1>
       </div>
       <div className="skills-level">
-        <SkillBar icon="file-excel" label={t("skillExcel")} skill={85} />
+        <SkillBar icon="file-excel" label={t("skillExcel")} skill={90} />
         <SkillBar icon="file-powerpoint" label={t("skillPowerPoint")} skill={85} />
         <SkillBar icon="file-word" label={t("skillWord")} skill={85} />
-        <SkillBar icon="list-check" label={t("skillJira")} skill={80} />
-        <SkillBar icon="people-group" label={t("skillTeamwork")} skill={80} />
+        <SkillBar icon="chart-column" label={t("skillPowerBI")} skill={5} />
+        <SkillBar icon="list-check" label={t("skillJira")} skill={85} />
+        <SkillBar icon="people-group" label={t("skillTeamwork")} skill={95} />
         <SkillBar icon="arrows-rotate" label={t("skillAgile")} skill={75} />
+        <SkillBar icon="book-open" label={t("skillConfluence")} skill={90} />
       </div>
       <p className="bar-info">{t("skillsNote")}</p>
     </section>

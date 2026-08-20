@@ -1,19 +1,29 @@
 import React from "react";
 import "./cv-block.css";
 
-function CvBlock({title, description, location, period}) {
-    return (
-        <div className="cv-block-container">
-            <div className="name-of-the-block">
-                <h2>{title}</h2>
-                <p>{description}</p>
-            </div>
-            <div className="cv-dates-places">
-                <p>{location}</p>
-                <p>{period}</p>
-            </div>
+function CvBlock({ title, description, location, period, bullets = [] }) {
+  return (
+    <article className="cv-entry">
+      <div className="cv-entry-heading">
+        <div className="cv-entry-title">
+          <h3>{title}</h3>
+          <p>{description}</p>
         </div>
-    );
+        <div className="cv-entry-meta" aria-label={`${location}, ${period}`}>
+          <p>{location}</p>
+          <p>{period}</p>
+        </div>
+      </div>
+
+      {bullets.length > 0 && (
+        <ul className="cv-entry-bullets">
+          {bullets.map((bullet) => (
+            <li key={bullet}>{bullet}</li>
+          ))}
+        </ul>
+      )}
+    </article>
+  );
 }
 
 export default CvBlock;

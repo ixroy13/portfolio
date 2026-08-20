@@ -1,22 +1,130 @@
-.cv-container {
+.cv-page {
+    width: 100%;
+    padding: clamp(.5rem, 2vw, 1.5rem) 4% 2rem;
+}
+
+.cv-document {
+    --cv-text: var(--white);
+    --cv-font-size: clamp(10px, 1.18vw, 13px);
+    width: min(100%, 960px);
+    margin: 0 auto;
+    padding: clamp(1rem, 2.5vw, 2rem) clamp(.5rem, 1.25vw, 1.5rem) clamp(1.5rem, 3vw, 2.5rem);
+    background: transparent;
+    color: var(--cv-text);
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: var(--cv-font-size);
+    line-height: 1.22;
+}
+
+.cv-header {
+    padding-bottom: .25em;
+    border-bottom: 1px solid var(--cv-text);
     text-align: center;
-    color: var(--white);
-    margin: 0 4%;
 }
 
-.cv-container h4 {
-    font-size: 1.5rem;
-    font-weight: bold;
-    margin: 2em 0 .5em;
+.cv-header h1 {
+    font-size: clamp(1rem, 1.8vw, 1.25rem);
+    line-height: 1.1;
+    font-weight: 700;
 }
 
-.cv-contact-info {
+.cv-summary {
+    margin: .85em 0 .55em;
+    text-align: left;
+}
+
+.cv-section {
+    margin-top: 1.25em;
+    padding: 0;
+}
+
+.cv-section h2 {
+    margin: 0 0 .8em;
+    font-size: 1.15em;
+    line-height: 1.1;
+    text-align: center;
+}
+
+.cv-section-content {
     display: flex;
-
-    justify-content: center;
-    border-top: 1px solid var(--white);
+    flex-direction: column;
+    gap: .32em;
 }
 
-.cv-contact-info p {
-    margin: .5em .3rem;
+.cv-skills {
+    margin-top: 1.25em;
+    padding: 0;
+}
+
+.cv-skills h2 {
+    margin: 0 0 .8em;
+    font-size: 1.15em;
+    line-height: 1.1;
+    text-align: center;
+}
+
+.cv-skills-grid {
+    display: grid;
+    grid-template-columns: 1.35fr 1.1fr .65fr;
+    gap: 1rem;
+}
+
+.cv-skill-group h3 {
+    margin: 0;
+    font-size: 1em;
+    line-height: 1.2;
+}
+
+.cv-skill-group ul {
+    margin: 0;
+    list-style: none;
+}
+
+.cv-skill-group li {
+    line-height: 1.22;
+}
+
+.cv-rotate-prompt {
+    display: none;
+}
+
+@media (max-width: 700px) {
+    .cv-document {
+        --cv-font-size: clamp(9px, 1.55vw, 11px);
+        padding-right: clamp(.5rem, 2vw, 1rem);
+        padding-left: clamp(.5rem, 2vw, 1rem);
+    }
+}
+
+@media (max-width: 560px) and (orientation: portrait) {
+    .cv-page {
+        min-height: calc(100vh - var(--nav-height));
+        padding: 0 4%;
+    }
+
+    .cv-document {
+        display: none;
+    }
+
+    .cv-rotate-prompt {
+        min-height: calc(100vh - var(--nav-height));
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 1rem;
+        color: var(--white);
+        text-align: center;
+    }
+
+    .cv-rotate-icon {
+        display: block;
+        font-size: 4rem;
+        line-height: 1;
+    }
+
+    .cv-rotate-prompt p {
+        max-width: 18rem;
+        font-size: 1rem;
+    }
 }

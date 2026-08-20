@@ -16,21 +16,12 @@ export default function Hero() {
     const startPosition = window.scrollY;
     const navHeight = document.querySelector(".main-nav")?.getBoundingClientRect().height || 0;
     const targetPosition = startPosition + skillsSection.getBoundingClientRect().top - navHeight;
-    const distance = targetPosition - startPosition;
-    const duration = Math.min(900, Math.max(450, Math.abs(distance) * 0.7));
-    let animationStart;
 
-    const animateScroll = (timestamp) => {
-      if (animationStart === undefined) animationStart = timestamp;
-
-      const progress = Math.min((timestamp - animationStart) / duration, 1);
-      const easedProgress = 1 - Math.pow(1 - progress, 3);
-      window.scrollTo(0, startPosition + distance * easedProgress);
-
-      if (progress < 1) window.requestAnimationFrame(animateScroll);
-    };
-
-    window.requestAnimationFrame(animateScroll);
+    window.scrollTo({
+      top: targetPosition,
+      left: 0,
+      behavior: "smooth",
+    });
   };
 
   return (

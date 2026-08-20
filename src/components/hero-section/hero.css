@@ -7,8 +7,7 @@
     font-size: clamp(2.25rem, 4.5vw, 4.75rem);
     line-height: 1.1;
     color: var(--white);
-    opacity: 0;
-    animation: hero-heading-enter .8s cubic-bezier(.22, 1, .36, 1) .1s both;
+    animation: hero-heading-enter .5s cubic-bezier(.16, 1, .3, 1) .05s both;
 }
 
 .hero-wrap {
@@ -37,9 +36,8 @@
     box-shadow: 1px 1px 12px 0px #1b1b1b;
     display: flex;
     flex-direction: column;
-    opacity: 0;
     transform: translate(var(--tile-x), var(--tile-y)) rotate(var(--tile-rotate));
-    animation: hero-tile-enter .75s cubic-bezier(.22, 1, .36, 1) var(--tile-delay) both;
+    animation: hero-tile-enter .5s cubic-bezier(.16, 1, .3, 1) var(--tile-delay) both;
 }
 
 .tiles .tile-square {  
@@ -91,33 +89,33 @@ body:not(.light-mode) .tiles div {
     --tile-x: -.7rem;
     --tile-y: -.8rem;
     --tile-rotate: -2.5deg;
-    --tile-delay: .25s;
+    --tile-delay: .05s;
 }
 
 .tiles div:nth-child(2) {
     --tile-x: .75rem;
     --tile-y: -1.4rem;
     --tile-rotate: 2deg;
-    --tile-delay: .38s;
+    --tile-delay: .11s;
 }
 
 .tiles div:nth-child(3) {
     --tile-x: -.6rem;
     --tile-y: .65rem;
     --tile-rotate: 2.5deg;
-    --tile-delay: .51s;
+    --tile-delay: .17s;
 }
 
 .tiles div:nth-child(4) {
     --tile-x: .1rem;
     --tile-y: 1rem;
     --tile-rotate: -2deg;
-    --tile-delay: .64s;
+    --tile-delay: .23s;
 }
 
 .swipe-btn {
     margin-top: clamp(1rem, 2vw, 1.2rem);
-    animation: shake 4s infinite;
+    animation: shake 2.6s ease-in-out infinite;
     display: grid;
     place-items: center;
     position: absolute;
@@ -176,39 +174,31 @@ body:not(.light-mode) .tiles div {
 }
 
 @keyframes shake {
-    0% {
-        translate: 0;
+    0%, 70%, 100% {
+        transform: translateY(0);
     }
 
     10% {
-        translate: 0 .5em;
-        }
-
-    15% {
-        translate: 0 -.2em;
+        transform: translateY(.35em);
     }
 
-    20% {
-        translate: 0 .5em;
+    17% {
+        transform: translateY(-.05em);
     }
 
-    25% {
-        translate: 0 -.2em;
+    24% {
+        transform: translateY(.15em);
     }
 
-    30% {
-        translate: 0 .5em;
-    }
-
-    35% {
-        translate: 0;
+    31% {
+        transform: translateY(0);
     }
 }
 
 @keyframes hero-heading-enter {
     from {
         opacity: 0;
-        transform: translateY(1.25rem);
+        transform: translateY(.75rem);
     }
 
     to {
@@ -221,8 +211,8 @@ body:not(.light-mode) .tiles div {
     from {
         opacity: 0;
         transform:
-            translate(var(--tile-x), calc(var(--tile-y) + 1.25rem))
-            rotate(calc(var(--tile-rotate) - 5deg));
+            translate(var(--tile-x), calc(var(--tile-y) + .75rem))
+            rotate(calc(var(--tile-rotate) - 2deg));
     }
 
     to {
@@ -231,10 +221,22 @@ body:not(.light-mode) .tiles div {
     }
 }
 
-@media (prefers-reduced-motion: reduce) {
-    .main-text h1,
-    .tiles div {
+@keyframes hero-fade-in {
+    from {
+        opacity: 0;
+    }
+
+    to {
         opacity: 1;
-        animation: none;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .main-text h1 {
+        animation: hero-fade-in .35s ease .05s both;
+    }
+
+    .tiles div {
+        animation: hero-fade-in .35s ease var(--tile-delay) both;
     }
 }

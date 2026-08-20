@@ -34,7 +34,7 @@
           keySplines="0.42, 0, 0.58, 1.0;0.42, 0, 0.58, 1.0"
           repeatCount="indefinite" />
 			</use>
-			<use xlink:href='#wave' opacty=".9">
+			<use xlink:href='#wave' opacity=".9">
 				<animateTransform
           attributeName="transform"
           attributeType="XML"
