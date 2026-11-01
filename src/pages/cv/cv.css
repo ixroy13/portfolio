@@ -3,6 +3,16 @@
     padding: clamp(.5rem, 2vw, 1.5rem) 4% 2rem;
 }
 
+.cv-page-title {
+    margin: 0 auto clamp(.5rem, 1.25vw, 1rem);
+    color: var(--white);
+    font-family: "UnifrakturCook", "Old English Text MT", cursive;
+    font-size: clamp(2.4rem, 6vw, 5rem);
+    font-weight: 700;
+    line-height: 1;
+    text-align: center;
+}
+
 .cv-document {
     --cv-text: var(--white);
     --cv-font-size: clamp(10px, 1.18vw, 13px);
@@ -103,6 +113,10 @@
     }
 
     .cv-document {
+        display: none;
+    }
+
+    .cv-page-title {
         display: none;
     }
 

@@ -90,6 +90,16 @@
     color: var(--white);
 }
 
+.label strong {
+    font-weight: inherit;
+}
+
+@media (max-width: 700px) {
+    .label strong {
+        font-weight: 700;
+    }
+}
+
 .skill-box:nth-child(1) .skill-image {
     background: #21a366;
     color: #fff;

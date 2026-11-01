@@ -23,8 +23,8 @@ export default function SkillBar(props) {
                     <span style={style} className="bar"></span>
                 </div>
                 <div className="label">
-                    <p>{props.label}</p>
-                    <p>{skillLevelLabel}</p>
+                    <p className="skill-name"><strong>{props.label}</strong></p>
+                    <p className="skill-level"><strong>{skillLevelLabel}</strong></p>
                 </div>
             </div>
         </div>

@@ -25,6 +25,7 @@ function Cv() {
         t("cvFalconBullet1"),
         t("cvFalconBullet2"),
         t("cvFalconBullet3"),
+        t("cvFalconBullet4"),
       ],
     },
     {
@@ -113,6 +114,8 @@ function Cv() {
         </span>
         <p>{t("cvRotatePrompt")}</p>
       </div>
+
+      <h1 className="cv-page-title">{t("curriculumVitae")}</h1>
 
       <article className="cv-document">
         <header className="cv-header">
