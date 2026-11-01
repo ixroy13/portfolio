@@ -73,9 +73,9 @@ const resources = {
       careerVolunteeringDescription:
         "Przez rok szkolny w ramach wolontariatu prowadziłem cotygodniowe spotkania z moim podopiecznym, pracowaliśmy razem nad jego pewnością siebie, a przy okazji zbudowaliśmy naprawdę dobrą relację. Każde spotkanie dokumentowałem w systemie fundacji Wiosna.",
       careerRossmannTitle: "Rossmann (poprzez agencję ISSP)",
-      careerRossmannPeriod: "czerwiec 2024 - grudzień 2025",
+      careerRossmannPeriod: "czerwiec 2024 - obecnie",
       careerRossmannDescription:
-        "To była moja pierwsza praca w pełnym wymiarze godzin. Nauczyłem się pracy w zespole i ogarniania wielu zmiennych naraz, m.in. biorąc udział w logistyce otwarcia nowych drogerii. Mimo krótkiego stażu współpracownicy cenili moje zaangażowanie i gotować do podejmowania się trudniejszych obowiązków.",
+        "To moja pierwsza praca w pełnym wymiarze godzin, w której nadal rozwijam umiejętność pracy w zespole i ogarniania wielu zmiennych naraz, m.in. biorąc udział w logistyce otwarcia nowych drogerii. Współpracownicy cenią moje zaangażowanie i gotowość do podejmowania się trudniejszych obowiązków.",
       careerBiedronkaTitle: "Biedronka",
       careerBiedronkaPeriod: "lipiec 2023 - wrzesień 2023",
       careerBiedronkaDescription:
@@ -125,7 +125,7 @@ const resources = {
         "Dokumentowanie przebiegu spotkań, postępów i wniosków w formularzach organizacji.",
       cvRossmann: "Rossmann (poprzez agencję ISSP)",
       cvRossmannRole: "Pracownik wsparcia sprzedaży",
-      cvRossmannPeriod: "czerwiec 2024 – grudzień 2025",
+      cvRossmannPeriod: "czerwiec 2024 – obecnie",
       cvRossmannBullet1:
         "Realizacja zadań operacyjnych zgodnie z centralnymi planami i harmonogramami podczas otwierania oraz reorganizacji sklepów.",
       cvRossmannBullet2:
@@ -237,9 +237,9 @@ const resources = {
       careerVolunteeringDescription:
         "Throughout the school year, as a volunteer, I held weekly meetings with my mentee. We worked together on their confidence and, along the way, built a really good relationship. I documented every meeting in the Wiosna Foundation's system.",
       careerRossmannTitle: "Rossmann (through ISSP agency)",
-      careerRossmannPeriod: "June 2024 - December 2025",
+      careerRossmannPeriod: "June 2024 - present",
       careerRossmannDescription:
-        "This was my first full-time job. I learned how to work in a team and manage many variables at once, including helping with the logistics of opening new drugstores. Despite the short tenure, my colleagues valued my commitment and willingness to take on more challenging responsibilities.",
+        "This is my first full-time job, where I continue to develop my ability to work in a team and manage many variables at once, including helping with the logistics of opening new drugstores. My colleagues value my commitment and willingness to take on more challenging responsibilities.",
       careerBiedronkaTitle: "Biedronka",
       careerBiedronkaPeriod: "July 2023 - September 2023",
       careerBiedronkaDescription:
@@ -288,7 +288,7 @@ const resources = {
         "Documenting meeting progress, outcomes and observations in the organisation's forms.",
       cvRossmann: "Rossmann (through ISSP agency)",
       cvRossmannRole: "Sales support assistant",
-      cvRossmannPeriod: "June 2024 – December 2025",
+      cvRossmannPeriod: "June 2024 – present",
       cvRossmannBullet1:
         "Delivering operational tasks according to central plans and schedules during store openings and reorganisations.",
       cvRossmannBullet2:
